@@ -116,7 +116,13 @@
 			<version>4.7</version>
 			<scope>test</scope>
 		</dependency>
-		
+		<!-- Mysql -->
+  		<dependency>
+		    <groupId>mysql</groupId>
+		    <artifactId>mysql-connector-java</artifactId>
+		    <version>5.1.37</version>
+		</dependency>
+				
 		<!-- Tiles	 -->  
 		<dependency>
 		    <groupId>org.apache.tiles</groupId>
@@ -135,25 +141,49 @@
   			<artifactId>mybatis-spring</artifactId>
   			<version>1.2.2</version>
   		</dependency>
-  		<!-- Oracle local 저장소 -->
-  		<dependency>
-  			<groupId>com.oracle</groupId>
-  			<artifactId>ojdbc</artifactId>
-  			<version>11</version>
-  		</dependency>
-  		<!-- <dependency> 
-	     	<groupId>com.oracle</groupId> 
-	     	<artifactId>ojdbc6</artifactId> 
-	     	<version>12.1.0.1</version> 
-	     	<scope>runtime</scope> 
-		</dependency> -->
+  		
+		<!-- fileupload -->
+		<dependency>
+			<groupId>commons-fileupload</groupId>
+			<artifactId>commons-fileupload</artifactId>
+			<version>1.2.2</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>1.4</version>
+		</dependency>
+		
 		<!--jdbc ,tx -->
 		<dependency>
     		<groupId>org.springframework</groupId>
     		<artifactId>spring-jdbc</artifactId>
     		<version>${org.springframework-version}</version>
 		</dependency>
-			      
+	
+		<!-- Security pwd -->
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-web</artifactId>
+			<version>4.0.1.RELEASE</version>
+		</dependency>
+		<!-- json -->
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-core</artifactId>
+			<version>2.7.3</version>
+		</dependency>
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-core-asl</artifactId>
+			<version>1.9.13</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>2.7.3</version>
+		</dependency>
+				      
 	</dependencies>
     <build>
         <plugins>
