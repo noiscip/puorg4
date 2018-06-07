@@ -10,5 +10,35 @@
 </h1>
 
 <P>  The time on the server is ${serverTime}. </P>
+
+<c:forEach var="u" items="${userList}">
+	${u.userNo}<br>
+	${u.userId}<br>
+	${u.userName}<br>
+	${u.point}<br>
+	${u.userReg}<br>
+	${u.blaTypeNo}<br>
+	${u.roleNo}<br>
+</c:forEach>
+
+<c:forEach var="u" items="${userList}">
+	${u.userNo}<br>
+	${u.userId}<br>
+	${u.userName}<br>
+	${u.point}<br>
+	${u.userReg}<br>
+	${u.blaTypeNo}<br>
+	${u.roleNo}<br>
+</c:forEach>
+
+<c:forEach var="u" items="${userList}">
+	${u.userNo}<br>
+	${u.userId}<br>
+	${u.userName}<br>
+	${u.point}<br>
+	${u.userReg}<br>
+	${u.blaTypeNo}<br>
+	${u.roleNo}<br>
+</c:forEach>
 </body>
 </html>
