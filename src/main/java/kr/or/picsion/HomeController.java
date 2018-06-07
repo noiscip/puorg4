@@ -53,11 +53,5 @@ public class HomeController {
 		
 		return "home.home";
 	}
-	
-	@RequestMapping(value="/register.ps")
-    public String register(){
-        
-        return "user.register";
-        
-    }
+
 }

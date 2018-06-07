@@ -3,7 +3,7 @@
 
 <body class="signup-page sidebar-collapse">
 
-	<div class="page-header header-filter" filter-color="purple" style="background-image: url('assets/img/bg7.jpg')">
+	<div class="page-header header-filter" filter-color="purple" style="background-image: url('<%=request.getContextPath()%>/assets/img/bg7.jpg')">
     <div class="container">
       <div class="row">
         <div class="col-md-10 ml-auto mr-auto">
@@ -48,7 +48,7 @@
                 </div>
                 <div class="col-md-5 mr-auto">
                 
-                  <form class="form" method="get" action="user/register.ps">
+                  <form class="form" method="post" action="user/register.ps">
                     <div class="form-group">
                       <div class="input-group">
                         <div class="input-group-prepend">
