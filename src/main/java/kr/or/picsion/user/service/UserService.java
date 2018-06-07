@@ -4,10 +4,20 @@ import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import kr.or.picsion.user.dao.UserDao;
+import kr.or.picsion.user.dto.User;
+
 @Service
 public class UserService {
 
 	@Autowired
-	private SqlSession sqlsession;
+	private SqlSession sqlSession;
 
+	
+	public void register(User user) {
+		
+		UserDao userDao = sqlSession.getMapper(UserDao.class);
+		userDao.registerUser(user);
+		
+	}
 }

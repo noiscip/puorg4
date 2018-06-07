@@ -12,7 +12,7 @@
 						<h2 class="card-title text-center">Register</h2>
 						<div class="card-body">
 
-							<form class="form" method="" action="">
+							<form class="form" action="user.register.ps">
 								<div class="form-group">
 									<div class="input-group">
 										<div class="input-group-prepend">

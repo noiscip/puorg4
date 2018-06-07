@@ -8,7 +8,7 @@ import kr.or.picsion.user.dto.User;
 public interface UserDao {
 
 	public List<User> userList();
-	public int insertUser(User user);
+	public int registerUser(User user);
 	public int updateUser(User user);
 	public int deleteUser(int userNo);
 	public User selectUser(int userNo);
