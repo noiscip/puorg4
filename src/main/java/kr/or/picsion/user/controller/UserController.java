@@ -1,10 +1,12 @@
 package kr.or.picsion.user.controller;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.View;
 
 import kr.or.picsion.user.dto.User;
@@ -23,13 +25,42 @@ public class UserController {
 	@Autowired
 	private BCryptPasswordEncoder bCryptPasswordEncoder;
 	
+	@RequestMapping(value="register.ps", method=RequestMethod.GET)
+    public String register(){
+        
+        return "user.register";
+    }
 	
-	@RequestMapping("register.ps")
-	public String userRegister(User user,Model model) {
+	@RequestMapping(value="register.ps", method=RequestMethod.POST)
+	public String userRegister(User user) {
 		System.out.println("하하하핳하");
 		System.out.println(user.getUserId());
 		userService.register(user);
 		
 		return "redirect:/home.ps";
+	}
+	
+	@RequestMapping(value="login.ps", method=RequestMethod.GET)
+	public String userLogint() {
+		System.out.println("응???왜안와");
+		return "user.login";
+	}
+	
+	
+	@RequestMapping(value="login.ps", method=RequestMethod.POST)
+	public String userLogin(User user, HttpSession session) {
+		System.out.println("로그인");
+		
+		User loginUser = userService.login(user);
+		String result="";
+		if(loginUser != null) {
+			System.out.println("로그인 성공");
+			session.setAttribute("user", loginUser);
+			result = "redirect:/home.ps";
+		}else {
+			System.out.println("로그인 실패");
+			result = "user/login.ps";
+		}
+		return result;
 	}
 }
