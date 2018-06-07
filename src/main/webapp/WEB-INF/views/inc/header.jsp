@@ -4,12 +4,13 @@
 <nav class="navbar navbar-fixed-top">
 	<div class="container-fluid">
 		<div class="navbar-header">
-			<a class="navbar-brand" href="home.ps">WebSiteName</a>
+			<a class="navbar-brand" href="<%=request.getContextPath()%>/home.ps">WebSiteName</a>
 		</div>
 		<ul class="nav navbar-nav">
-			<li><a href="register.ps">회원가입</a></li>
+			<li><a href="<%=request.getContextPath()%>/user/register.ps">회원가입</a></li>
+			<li><a href="<%=request.getContextPath()%>/user/login.ps">로그인</a></li>
 			
-			<li><a data-toggle="modal" data-target="#loginModal">로그인</a></li>
+			<li><a data-toggle="modal" data-target="#loginModal">로그인 Modal</a></li>
 		</ul>
 	</div>
 </nav>
