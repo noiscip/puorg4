@@ -15,7 +15,7 @@
 	<!-- 공통 DB작업  -->
 	<bean id="driverManagerDataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 	 	<property name="driverClassName" value="com.mysql.jdbc.Driver" />
-	 	<property name="url" value="jdbc:mysql://localhost:3306/picsion?characterEncoding=utf8" />
+	 	<property name="url" value="jdbc:mysql://192.168.0.23:3306/picsion?characterEncoding=utf8" />
 	 	<property name="username" value="Picsion" />
 	 	<property name="password" value="pic1004" />
 	</bean>
@@ -29,7 +29,7 @@
 	
 	<bean id="sqlSessionFactoryBean"  class="org.mybatis.spring.SqlSessionFactoryBean">
 	    <property name="dataSource" ref="driverManagerDataSource"></property>
-	    <property name="mapperLocations" value="classpath*:kr/or/picsion/mapper/*xml" />
+	    <property name="mapperLocations" value="classpath*:kr/or/picsion/*/mapper/*xml" />
 	</bean> 
 
 	<bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">

@@ -5,4 +5,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 <mapper namespace="kr.or.picsion.user.dao.UserDao">
 
+	<select id="getPicsionList" resultType="kr.or.picsion.user.dto.User">
+		SELECT * FROM users
+	</select>
 </mapper>

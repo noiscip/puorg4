@@ -16,4 +16,7 @@ public interface UserDao {
 	public List<Picture> respectPicList(int userNo);
 	public List<User> followingUserList(int userNo);
 	public List<User> followerUserList(int userNo);
+	
+	//////////////////////////
+	List<User> getPicsionList();
 }
