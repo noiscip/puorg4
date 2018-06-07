@@ -8,6 +8,6 @@ import org.springframework.stereotype.Service;
 public class OperationService {
 	
 	@Autowired
-	private SqlSession sqlsession;
+	private SqlSession sqlSession;
 	
 }
