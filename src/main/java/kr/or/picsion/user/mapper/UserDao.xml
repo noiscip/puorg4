@@ -5,4 +5,14 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 <mapper namespace="kr.or.picsion.user.dao.UserDao">
 
+	<select id="getPicsionList" resultType="kr.or.picsion.user.dto.User">
+		SELECT * FROM users
+	</select>
+	
+	<insert id="registerUser">
+	INSERT INTO users
+		(userId, pwd, userName, roleNo)
+	VALUES
+		( #{userId}, #{pwd}, #{userName},  1)
+	</insert>
 </mapper>
