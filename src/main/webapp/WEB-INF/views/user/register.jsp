@@ -47,7 +47,8 @@
                   </div>
                 </div>
                 <div class="col-md-5 mr-auto">
-                  <form class="form" method="" action="">
+                
+                  <form class="form" method="get" action="user/register.ps">
                     <div class="form-group">
                       <div class="input-group">
                         <div class="input-group-prepend">
@@ -55,7 +56,7 @@
                             <i class="material-icons">face</i>
                           </span>
                         </div>
-                        <input type="text" class="form-control" placeholder="아이디...">
+                        <input type="text" class="form-control" id="userId" name="userId" placeholder="아이디...">
                       </div>
                     </div>
                     <div class="form-group">
@@ -65,7 +66,7 @@
                             <i class="material-icons">text_format</i>
                           </span>
                         </div>
-                        <input type="text" class="form-control" placeholder="이름...">
+                        <input type="text" class="form-control" name="userName" placeholder="이름...">
                       </div>
                     </div>
                     <div class="form-group">
@@ -75,7 +76,7 @@
                             <i class="material-icons">lock_outline</i>
                           </span>
                         </div>
-                        <input type="password" placeholder="비밀번호..." class="form-control" />
+                        <input type="password" placeholder="비밀번호..." name="pwd" class="form-control" />
                       </div>
                     </div>
                     <div class="form-group">
@@ -109,7 +110,7 @@
                       </label>
                     </div>
                     <div class="text-center">
-                      <a href="#pablo" class="btn btn-primary btn-round">가입하기</a>
+                      <button type="submit" class="btn btn-primary btn-round">가입</button>
                     </div>
                   </form>
                 </div>
@@ -122,60 +123,4 @@
     
   </div>
 
-<<<<<<< HEAD
-							<form class="form" action="user.register.ps">
-								<div class="form-group">
-									<div class="input-group">
-										<div class="input-group-prepend">
-											<span class="input-group-text"> 
-												<i class="material-icons">face</i>
-											</span>
-										</div>
-										<input type="text" class="form-control" placeholder="Id...">
-									</div>
-								</div>
-								<div class="form-group">
-									<div class="input-group">
-										<div class="input-group-prepend">
-											<span class="input-group-text"> 
-												<i class="material-icons">mail</i>
-											</span>
-										</div>
-										<input type="text" class="form-control" placeholder="Name...">
-									</div>
-								</div>
-								<div class="form-group">
-									<div class="input-group">
-										<div class="input-group-prepend">
-											<span class="input-group-text"> 
-												<i class="material-icons">lock_outline</i>
-											</span>
-										</div>
-										<input type="password" placeholder="Password..." class="form-control" />
-									</div>
-								</div>
-								<div class="form-check">
-									<label class="form-check-label"> 
-									<input class="form-check-input" type="checkbox" value="" checked>
-									<span class="form-check-sign"> 
-										<span class="check"></span>
-									</span> I agree to the 
-									<a href="#something">terms and conditions</a>.
-									</label>
-								</div>
-								<div class="text-center">
-									<a href="#pablo" class="btn btn-primary btn-round">Get Started</a>
-								</div>
-							</form>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
 </body>
-</html>
-=======
-</body>
->>>>>>> 4fb0893b68c5451c4ff7dd5a28b34955d24950d1

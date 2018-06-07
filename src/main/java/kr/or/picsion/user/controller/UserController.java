@@ -26,10 +26,10 @@ public class UserController {
 	
 	@RequestMapping("register.ps")
 	public String userRegister(User user,Model model) {
-		
 		System.out.println("하하하핳하");
+		System.out.println(user.getUserId());
 		userService.register(user);
 		
-		return "home.home";
+		return "redirect:/home.ps";
 	}
 }
