@@ -44,6 +44,6 @@
 		<websocket:mapping handler="message" path="/message" />
 	</websocket:handlers>
 	
-	<bean id="message" class="kr.or.picsion.socket.AlramSocketHandler"></bean>	
+	<bean id="message" class="kr.or.picsion.notice.socket.NoticeSocketHandler"></bean>	
 		
 </beans>

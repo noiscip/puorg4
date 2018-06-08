@@ -1,4 +1,4 @@
-package kr.or.picsion.socket;
+package kr.or.picsion.notice.socket;
 
 import org.apache.ibatis.session.SqlSession;
 import org.slf4j.Logger;
@@ -12,7 +12,7 @@ import org.springframework.web.socket.handler.TextWebSocketHandler;
 import kr.or.picsion.HomeController;
 import kr.or.picsion.message.dao.MessageDao;
 
-public class AlramSocketHandler extends TextWebSocketHandler {
+public class NoticeSocketHandler extends TextWebSocketHandler {
 
 	@Autowired
 	private SqlSession sqlSession;
