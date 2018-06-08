@@ -1,4 +1,4 @@
-<%-- <%@ page language="java" contentType="text/html; charset=UTF-8"
+<%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles"%>
 
@@ -12,7 +12,6 @@
 	
 	<link href="<%=request.getContextPath()%>/assets/img/apple-icon.png" rel="apple-touch-icon" sizes="76x76">
 	<link href="<%=request.getContextPath()%>/assets/img/favicon.png" rel="icon" type="image/png">
-	<link href="<%=request.getContextPath()%>/images/picsionlogo.png" rel="icon" type="image/png">
 	<!-- Fonts and icons -->
 	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" rel="stylesheet" type="text/css"/>
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
@@ -37,14 +36,9 @@
 	<!-- Control Center for Now Ui Kit: parallax effects, scripts for the example pages etc -->
 	<script src="<%=request.getContextPath()%>/assets/js/material-kit.js" type="text/javascript"></script>
 	
-	<style type="text/css">
-		#main{
-			margin-top: 70px;
-		}
-	</style>
 </head>
 
-<body class="index-page sidebar-collapse" style="background-image: url('<%=request.getContextPath()%>/assets/img/city-profile.jpg');">
+<body class="index-page sidebar-collapse">
 	<!-- header -->
 	<tiles:insertAttribute name="header" />
 
@@ -58,4 +52,4 @@
 
 
 </body>
-</html> --%>
+</html>

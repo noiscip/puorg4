@@ -1,7 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     
-<div class="section section-signup page-header" style="background-image: url('<%=request.getContextPath()%>/assets/img/city.jpg');">
+<div class="page-header header-filter" style="background-image: url('<%=request.getContextPath()%>/assets/img/city.jpg');">
+ <div class="section section-signup page-header">
       <div class="container">
         <div class="row">
           <div class="col-md-4 ml-auto mr-auto">
@@ -58,5 +59,6 @@
             </div>
           </div>
         </div>
+      </div>
       </div>
     </div>

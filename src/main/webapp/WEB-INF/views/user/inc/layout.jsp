@@ -1,4 +1,4 @@
-<%-- <%@ page language="java" contentType="text/html; charset=UTF-8"
+<%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles"%>
 
@@ -37,14 +37,9 @@
 	<!-- Control Center for Now Ui Kit: parallax effects, scripts for the example pages etc -->
 	<script src="<%=request.getContextPath()%>/assets/js/material-kit.js" type="text/javascript"></script>
 	
-	<style type="text/css">
-		#main{
-			margin-top: 70px;
-		}
-	</style>
 </head>
 
-<body class="index-page sidebar-collapse" style="background-image: url('<%=request.getContextPath()%>/assets/img/city-profile.jpg');">
+<body class="signup-page sidebar-collapse">
 	<!-- header -->
 	<tiles:insertAttribute name="header" />
 
@@ -56,6 +51,5 @@
 	<!-- footer -->
 	<tiles:insertAttribute name="footer" />
 
-
 </body>
-</html> --%>
+</html>

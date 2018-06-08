@@ -43,6 +43,7 @@ public class HomeController {
 		String formattedDate = dateFormat.format(date);
 		
 		UserDao UserDao = sqlSession.getMapper(UserDao.class);
+		
 		List<User> user = UserDao.getPicsionList();
 		System.out.println("User 리스트를 보여주세요");
 		for(User u : user) {
