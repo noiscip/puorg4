@@ -14,7 +14,7 @@ public class Picture {
 	private int picHit;
 	private int picPrice;
 	private int userNo;
-	private int blaTypeNo;
+	private int tableNo;
 	private String camera;
 	private String resolution;
 	private Date photoDate;
@@ -23,7 +23,7 @@ public class Picture {
 	public Picture() {}
 
 	public Picture(int picNo, String picTitle, String picContent, Date picReg, String picPath, String picWater,
-			int picHit, int picPrice, int userNo, int blaTypeNo, String camera, String resolution, Date photoDate,
+			int picHit, int picPrice, int userNo, int tableNo, String camera, String resolution, Date photoDate,
 			List<String> tagContent) {
 		this.picNo = picNo;
 		this.picTitle = picTitle;
@@ -34,7 +34,7 @@ public class Picture {
 		this.picHit = picHit;
 		this.picPrice = picPrice;
 		this.userNo = userNo;
-		this.blaTypeNo = blaTypeNo;
+		this.tableNo = tableNo;
 		this.camera = camera;
 		this.resolution = resolution;
 		this.photoDate = photoDate;
@@ -113,12 +113,12 @@ public class Picture {
 		this.userNo = userNo;
 	}
 
-	public int getBlaTypeNo() {
-		return blaTypeNo;
+	public int getTableNo() {
+		return tableNo;
 	}
 
-	public void setBlaTypeNo(int blaTypeNo) {
-		this.blaTypeNo = blaTypeNo;
+	public void setTableNo(int tableNo) {
+		this.tableNo = tableNo;
 	}
 
 	public String getCamera() {
@@ -157,7 +157,7 @@ public class Picture {
 	public String toString() {
 		return "Picture [picNo=" + picNo + ", picTitle=" + picTitle + ", picContent=" + picContent + ", picReg="
 				+ picReg + ", picPath=" + picPath + ", picWater=" + picWater + ", picHit=" + picHit + ", picPrice="
-				+ picPrice + ", userNo=" + userNo + ", blaTypeNo=" + blaTypeNo + ", camera=" + camera + ", resolution="
+				+ picPrice + ", userNo=" + userNo + ", tableNo=" + tableNo + ", camera=" + camera + ", resolution="
 				+ resolution + ", photoDate=" + photoDate + ", tagContent=" + tagContent + "]";
 	}
 

@@ -8,7 +8,7 @@ public class Blame {
 	private String blaUserNo;
 	private String blaContent;
 	private Date blaReg;
-	private int blaTypeNo;
+	private int tableNo;
 	private int brdNo;
 	private int cmtNo;
 	private int picNo;
@@ -16,13 +16,13 @@ public class Blame {
 
 	public Blame() {}
 
-	public Blame(int blaNo, String blaUserNo, String blaContent, Date blaReg, int blaTypeNo, int brdNo, int cmtNo,
+	public Blame(int blaNo, String blaUserNo, String blaContent, Date blaReg, int tableNo, int brdNo, int cmtNo,
 			int picNo, int userNo) {
 		this.blaNo = blaNo;
 		this.blaUserNo = blaUserNo;
 		this.blaContent = blaContent;
 		this.blaReg = blaReg;
-		this.blaTypeNo = blaTypeNo;
+		this.tableNo = tableNo;
 		this.brdNo = brdNo;
 		this.cmtNo = cmtNo;
 		this.picNo = picNo;
@@ -61,12 +61,12 @@ public class Blame {
 		this.blaReg = blaReg;
 	}
 
-	public int getBlaTypeNo() {
-		return blaTypeNo;
+	public int getTableNo() {
+		return tableNo;
 	}
 
-	public void setBlaTypeNo(int blaTypeNo) {
-		this.blaTypeNo = blaTypeNo;
+	public void setTableNo(int tableNo) {
+		this.tableNo = tableNo;
 	}
 
 	public int getBrdNo() {
@@ -104,7 +104,7 @@ public class Blame {
 	@Override
 	public String toString() {
 		return "Blame [blaNo=" + blaNo + ", blaUserNo=" + blaUserNo + ", blaContent=" + blaContent + ", blaReg="
-				+ blaReg + ", blaTypeNo=" + blaTypeNo + ", brdNo=" + brdNo + ", cmtNo=" + cmtNo + ", picNo=" + picNo
+				+ blaReg + ", tableNo=" + tableNo + ", brdNo=" + brdNo + ", cmtNo=" + cmtNo + ", picNo=" + picNo
 				+ ", userNo=" + userNo + "]";
 	}
 

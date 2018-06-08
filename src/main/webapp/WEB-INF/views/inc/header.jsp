@@ -1,70 +1,68 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
-<nav class="navbar navbar-fixed-top">
-	<div class="container-fluid">
-		<div class="navbar-header">
-			<a class="navbar-brand" href="home.ps">WebSiteName</a>
+<nav class="navbar navbar-transparent navbar-color-on-scroll fixed-top navbar-expand-lg" color-on-scroll="100" id="sectionsNav">
+	<div class="container">
+		<div class="navbar-translate">
+			<a class="navbar-brand" href="<%=request.getContextPath()%>/home.ps"> picsion </a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span> 
+				<span class="navbar-toggler-icon"></span> 
+				<span class="navbar-toggler-icon"></span>
+			</button>
 		</div>
+		<div class="collapse navbar-collapse">
+			<ul class="navbar-nav ml-auto">
+				<c:choose>
+					<c:when test="${sessionScope.user eq null}">
+						<li class="nav-item">
+							<a class="nav-link" href="<%=request.getContextPath()%>/user/register.ps" onclick="scrollToDownload()"> 
+								<i class="material-icons">cloud_download</i> 회원가입
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="<%=request.getContextPath()%>/user/login.ps" onclick="scrollToDownload()"> 
+								<i class="material-icons">cloud_download</i>로그인
+							</a>
+						</li>
+					</c:when>
+					<c:otherwise>
+						<li class="nav-item">
+							<a class="nav-link" href="#" onclick="scrollToDownload()"> 
+								<i class="material-icons">cloud_download</i> ${sessionScope.user.userName}
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="<%=request.getContextPath()%>/user/logout.ps" onclick="scrollToDownload()"> 
+								<i class="material-icons">cloud_download</i> 로그아웃
+							</a>
+						</li>
+					</c:otherwise>
+				</c:choose>
+			</ul>
+		</div>
+<<<<<<< HEAD
 		<ul class="nav navbar-nav">
-			<li><a href="register.ps">회원가입</a></li>
+		
+				<li><a href="<%=request.getContextPath()%>/user/aa.ps">회원관리</a></li>
+		<c:choose>
+			<c:when test="${sessionScope.user eq null}">
+				<li><a href="<%=request.getContextPath()%>/user/register.ps">회원가입</a></li>
+				<li><a href="<%=request.getContextPath()%>/user/login.ps">로그인</a></li>
+			</c:when>
+			<c:otherwise>
+				<li><a href="#">${sessionScope.user.userName}</a></li>
+				<li><a href="<%=request.getContextPath()%>/user/logout.ps">로그아웃</a></li>
+			</c:otherwise>
+		</c:choose>
+		
 			
-			<li><a data-toggle="modal" data-target="#loginModal">로그인</a></li>
 		</ul>
+=======
+>>>>>>> e9d267ce23f84f6f50d140b67c361cd247f5017c
 	</div>
 </nav>
 
 <!---------------------------------------------------------------------------------------->
-<!-- 로그인 -->
-<div class="modal fade" id="loginModal" tabindex="-1" role="">
-    <div class="modal-dialog modal-login" role="document">
-        <div class="modal-content">
-            <div class="card card-signup card-plain">
-                <div class="modal-header">
-                    <div class="card-header card-header-primary text-center">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="material-icons">clear</i></button>
-                        <h4 class="card-title">Log in</h4>
-                    </div>
-                </div>
-                <div class="modal-body">
-                    <form class="form" action="" method="post">
-                        <p class="description text-center">Or Be Classical</p>
-                        <div class="card-body">
-
-                            <div class="form-group bmd-form-group">
-                                <div class="input-group">
-                                    <span class="input-group-addon">
-                                        <i class="material-icons">face</i>
-                                    </span>
-                                    <input type="text" class="form-control" placeholder="First Name...">
-                                </div>
-                            </div>
-
-                            <div class="form-group bmd-form-group">
-                                <div class="input-group">
-                                    <span class="input-group-addon">
-                                        <i class="material-icons">email</i>
-                                    </span>
-                                    <input type="text" class="form-control" placeholder="Email...">
-                                </div>
-                            </div>
-
-                            <div class="form-group bmd-form-group">
-                                <div class="input-group">
-                                    <span class="input-group-addon">
-                                        <i class="material-icons">lock_outline</i>
-                                    </span>
-                                    <input type="password" placeholder="Password..." class="form-control">
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer justify-content-center">
-                    <a href="#pablo" class="btn btn-primary btn-link btn-wd btn-lg">Get Started</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 
