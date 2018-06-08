@@ -25,7 +25,7 @@ public class UserService {
 		UserDao userDao = sqlSession.getMapper(UserDao.class);
 		User selectUser = userDao.selectUser(user.getUserId());
 		
-		if(!user.getPwd().equals(selectUser.getPwd())) {
+		if(selectUser == null || !user.getPwd().equals(selectUser.getPwd())) {
 			selectUser = null;
 		}
 		

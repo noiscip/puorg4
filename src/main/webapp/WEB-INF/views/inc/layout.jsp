@@ -10,15 +10,34 @@
 	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
 	<title>PICSION</title>
 	
-	<link rel="apple-touch-icon" sizes="76x76" href="<%=request.getContextPath()%>/assets/img/apple-icon.png">
-	<link rel="icon" type="image/png" href="<%=request.getContextPath()%>/assets/img/favicon.png">
-	<!--     Fonts and icons     -->
-	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
-	
+	<link href="<%=request.getContextPath()%>/assets/img/apple-icon.png" rel="apple-touch-icon" sizes="76x76">
+	<link href="<%=request.getContextPath()%>/assets/img/favicon.png" rel="icon" type="image/png">
+	<!-- Fonts and icons -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" rel="stylesheet" type="text/css"/>
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
 	<!-- CSS Files -->
-	<link href="<%=request.getContextPath()%>/assets/css/material-kit.css?v=2.0.3" rel="stylesheet" />
-
+	<link href="<%=request.getContextPath()%>/assets/css/material-kit.css" rel="stylesheet" />
+	
+	<!-- Js -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<!--   Core JS Files   -->
+	<script src="<%=request.getContextPath()%>/assets/js/core/jquery.min.js" type="text/javascript"></script>
+	<script src="<%=request.getContextPath()%>/assets/js/core/popper.min.js" type="text/javascript"></script>
+	<script src="<%=request.getContextPath()%>/assets/js/core/bootstrap-material-design.min.js" type="text/javascript"></script>
+	<script src="<%=request.getContextPath()%>/assets/js/plugins/moment.min.js"></script>
+	<!--	Plugin for the Datepicker, full documentation here: https://github.com/Eonasdan/bootstrap-datetimepicker -->
+	<script src="<%=request.getContextPath()%>/assets/js/plugins/bootstrap-datetimepicker.js" type="text/javascript"></script>
+	<!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+	<script src="<%=request.getContextPath()%>/assets/js/plugins/nouislider.min.js" type="text/javascript"></script>
+	<!-- Control Center for Now Ui Kit: parallax effects, scripts for the example pages etc -->
+	<script src="<%=request.getContextPath()%>/assets/js/material-kit.js" type="text/javascript"></script>
+	
+	<style type="text/css">
+		#main{
+			margin-top: 70px;
+		}
+	</style>
 </head>
 
 <body>
@@ -33,20 +52,6 @@
 	<!-- footer -->
 	<tiles:insertAttribute name="footer" />
 
-	<!--   Core JS Files   -->
-	<script src="<%=request.getContextPath()%>/assets/js/core/jquery.min.js" type="text/javascript"></script>
-	<script src="<%=request.getContextPath()%>/assets/js/core/popper.min.js" type="text/javascript"></script>
-	<script src="<%=request.getContextPath()%>/assets/js/core/bootstrap-material-design.min.js" type="text/javascript"></script>
-	<script src="<%=request.getContextPath()%>/assets/js/plugins/moment.min.js"></script>
-	<!--	Plugin for the Datepicker, full documentation here: https://github.com/Eonasdan/bootstrap-datetimepicker -->
-	<script src="<%=request.getContextPath()%>/assets/js/plugins/bootstrap-datetimepicker.js" type="text/javascript"></script>
-	<!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
-	<script src="<%=request.getContextPath()%>/assets/js/plugins/nouislider.min.js" type="text/javascript"></script>
-	<!-- Control Center for Now Ui Kit: parallax effects, scripts for the example pages etc -->
-	<script src="<%=request.getContextPath()%>/assets/js/material-kit.js?v=2.0.3" type="text/javascript"></script>
-	
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 </body>
 </html>

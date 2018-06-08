@@ -6,13 +6,17 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 <mapper namespace="kr.or.picsion.user.dao.UserDao">
 
 	<select id="getPicsionList" resultType="kr.or.picsion.user.dto.User">
-		SELECT * FROM users
+		SELECT * FROM USERS
 	</select>
 	
 	<insert id="registerUser">
-	INSERT INTO users
+	INSERT INTO USERS
 		(userId, pwd, userName, roleNo)
 	VALUES
 		( #{userId}, #{pwd}, #{userName},  1)
 	</insert>
+	
+	<select id="selectUser" resultType="kr.or.picsion.user.dto.User">
+		SELECT * FROM USERS WHERE userId= #{userId}
+	</select>
 </mapper>
