@@ -18,6 +18,17 @@ public class UserService {
 		
 		UserDao userDao = sqlSession.getMapper(UserDao.class);
 		userDao.registerUser(user);
+	}
+	
+	public User login(User user) {
 		
+		UserDao userDao = sqlSession.getMapper(UserDao.class);
+		User selectUser = userDao.selectUser(user.getUserId());
+		
+		if(selectUser == null || !user.getPwd().equals(selectUser.getPwd())) {
+			selectUser = null;
+		}
+		
+		return selectUser;
 	}
 }
