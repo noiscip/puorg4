@@ -19,7 +19,7 @@
 	유저 이름 : ${u.userName}<br>
 	유저 포인트 : ${u.point}<br>
 	유저 가입날짜 : ${u.userReg}<br>
-	유저 테이블 종류 번호 : ${u.blaTypeNo}<br>
+	유저 테이블 종류 번호 : ${u.tableNo}<br>
 	유저 권한 : ${u.roleNo}<br>
 	<br><br><br>
 </c:forEach>

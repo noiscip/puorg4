@@ -12,9 +12,13 @@
 	
 	<link href="<%=request.getContextPath()%>/assets/img/apple-icon.png" rel="apple-touch-icon" sizes="76x76">
 	<link href="<%=request.getContextPath()%>/assets/img/favicon.png" rel="icon" type="image/png">
+	<link href="<%=request.getContextPath()%>/images/picsionlogo.png" rel="icon" type="image/png">
 	<!-- Fonts and icons -->
 	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" rel="stylesheet" type="text/css"/>
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+	
+    <link href="<%=request.getContextPath()%>/assets/demo/demo.css" rel="stylesheet" />
+	
 	<!-- CSS Files -->
 	<link href="<%=request.getContextPath()%>/assets/css/material-kit.css" rel="stylesheet" />
 	
@@ -40,7 +44,7 @@
 	</style>
 </head>
 
-<body>
+<body class="index-page sidebar-collapse">
 	<!-- header -->
 	<tiles:insertAttribute name="header" />
 

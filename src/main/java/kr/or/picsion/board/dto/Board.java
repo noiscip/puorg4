@@ -12,13 +12,13 @@ public class Board {
 	private String copyright;
 	private Date brdReg;
 	private int userNo;
-	private int blaTypeNo;
+	private int tableNo;
 	private int operStateNo;
 
 	public Board() {}
 
 	public Board(int brdNo, String brdTitle, String brdContent, int brdExpectPrice, Date brdExpectEndDate,
-			String copyright, Date brdReg, int userNo, int blaTypeNo, int operStateNo) {
+			String copyright, Date brdReg, int userNo, int tableNo, int operStateNo) {
 		this.brdNo = brdNo;
 		this.brdTitle = brdTitle;
 		this.brdContent = brdContent;
@@ -27,7 +27,7 @@ public class Board {
 		this.copyright = copyright;
 		this.brdReg = brdReg;
 		this.userNo = userNo;
-		this.blaTypeNo = blaTypeNo;
+		this.tableNo = tableNo;
 		this.operStateNo = operStateNo;
 	}
 
@@ -95,12 +95,12 @@ public class Board {
 		this.userNo = userNo;
 	}
 
-	public int getBlaTypeNo() {
-		return blaTypeNo;
+	public int getTableNo() {
+		return tableNo;
 	}
 
-	public void setBlaTypeNo(int blaTypeNo) {
-		this.blaTypeNo = blaTypeNo;
+	public void setTableNo(int blaTypeNo) {
+		this.tableNo = blaTypeNo;
 	}
 
 	public int getOperStateNo() {
@@ -115,7 +115,7 @@ public class Board {
 	public String toString() {
 		return "Board [brdNo=" + brdNo + ", brdTitle=" + brdTitle + ", brdContent=" + brdContent + ", brdExpectPrice="
 				+ brdExpectPrice + ", brdExpectEndDate=" + brdExpectEndDate + ", copyright=" + copyright + ", brdReg="
-				+ brdReg + ", userNo=" + userNo + ", blaTypeNo=" + blaTypeNo + ", operStateNo=" + operStateNo + "]";
+				+ brdReg + ", userNo=" + userNo + ", tableNo=" + tableNo + ", operStateNo=" + operStateNo + "]";
 	}
 
 }
