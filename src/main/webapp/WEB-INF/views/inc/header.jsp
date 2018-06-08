@@ -8,6 +8,7 @@
 		</div>
 		<ul class="nav navbar-nav">
 		
+				<li><a href="<%=request.getContextPath()%>/user/aa.ps">회원관리</a></li>
 		<c:choose>
 			<c:when test="${sessionScope.user eq null}">
 				<li><a href="<%=request.getContextPath()%>/user/register.ps">회원가입</a></li>
