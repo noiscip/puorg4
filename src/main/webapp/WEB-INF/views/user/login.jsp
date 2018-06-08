@@ -26,18 +26,10 @@
                   <span class="bmd-form-group"><div class="input-group">
                     <div class="input-group-prepend">
                       <span class="input-group-text">
-                        <i class="material-icons">face</i>
-                      </span>
-                    </div>
-                    <input type="text" class="form-control" placeholder="First Name...">
-                  </div></span>
-                  <span class="bmd-form-group"><div class="input-group">
-                    <div class="input-group-prepend">
-                      <span class="input-group-text">
                         <i class="material-icons">email</i>
                       </span>
                     </div>
-                    <input type="email" class="form-control" placeholder="Email...">
+                    <input type="text" class="form-control" name="userId" placeholder="Id...">
                   </div></span>
                   <span class="bmd-form-group"><div class="input-group">
                     <div class="input-group-prepend">
@@ -45,7 +37,7 @@
                         <i class="material-icons">lock_outline</i>
                       </span>
                     </div>
-                    <input type="password" class="form-control" placeholder="Password...">
+                    <input type="password" class="form-control" name="pwd" placeholder="Password...">
                   </div></span>
                   <!-- If you want to add a checkbox to this form, uncomment this code
 

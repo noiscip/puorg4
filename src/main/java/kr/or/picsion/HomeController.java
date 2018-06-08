@@ -44,7 +44,7 @@ public class HomeController {
 		
 		UserDao UserDao = sqlSession.getMapper(UserDao.class);
 		List<User> user = UserDao.getPicsionList();
-		System.out.println("picsion의 리스트를 보여주세요");
+		System.out.println("User 리스트를 보여주세요");
 		for(User u : user) {
 			System.out.println(u);
 		}
