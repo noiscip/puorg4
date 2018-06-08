@@ -27,22 +27,17 @@ public class UserController {
 	
 	@RequestMapping(value="register.ps", method=RequestMethod.GET)
     public String register(){
-        
         return "user.register";
     }
 	
 	@RequestMapping(value="register.ps", method=RequestMethod.POST)
 	public String userRegister(User user) {
-		System.out.println("하하하핳하");
-		System.out.println(user.getUserId());
 		userService.register(user);
-		
 		return "redirect:/home.ps";
 	}
 	
 	@RequestMapping(value="login.ps", method=RequestMethod.GET)
 	public String userLogint() {
-		System.out.println("응???왜안와");
 		return "user.login";
 	}
 	
@@ -59,8 +54,16 @@ public class UserController {
 			result = "redirect:/home.ps";
 		}else {
 			System.out.println("로그인 실패");
-			result = "user/login.ps";
+			result = "redirect:/user/login.ps";
 		}
 		return result;
+	}
+	
+	@RequestMapping("logout.ps")
+	public String userLogout(HttpSession session) {
+		
+		session.invalidate();
+		
+		return "redirect:/home.ps";
 	}
 }
