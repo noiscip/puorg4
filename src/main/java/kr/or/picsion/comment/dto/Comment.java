@@ -11,12 +11,12 @@ public class Comment {
 	private int userNo;
 	private int brdNo;
 	private int picNo;
-	private int blaTypeNo;
+	private int tableNo;
 	
 	public Comment() {}
 
 	public Comment(int cmtNo, String cmtContent, Date cmtReg, String cmtDel, int userNo, int brdNo, int picNo,
-			int blaTypeNo) {
+			int tableNo) {
 		this.cmtNo = cmtNo;
 		this.cmtContent = cmtContent;
 		this.cmtReg = cmtReg;
@@ -24,7 +24,7 @@ public class Comment {
 		this.userNo = userNo;
 		this.brdNo = brdNo;
 		this.picNo = picNo;
-		this.blaTypeNo = blaTypeNo;
+		this.tableNo = tableNo;
 	}
 
 	public int getCmtNo() {
@@ -83,18 +83,18 @@ public class Comment {
 		this.picNo = picNo;
 	}
 
-	public int getBlaTypeNo() {
-		return blaTypeNo;
+	public int getTableNo() {
+		return tableNo;
 	}
 
-	public void setBlaTypeNo(int blaTypeNo) {
-		this.blaTypeNo = blaTypeNo;
+	public void setTableNo(int blaTypeNo) {
+		this.tableNo = blaTypeNo;
 	}
 
 	@Override
 	public String toString() {
 		return "Comments [cmtNo=" + cmtNo + ", cmtContent=" + cmtContent + ", cmtReg=" + cmtReg + ", cmtDel=" + cmtDel
-				+ ", userNo=" + userNo + ", brdNo=" + brdNo + ", picNo=" + picNo + ", blaTypeNo=" + blaTypeNo + "]";
+				+ ", userNo=" + userNo + ", brdNo=" + brdNo + ", picNo=" + picNo + ", tableNo=" + tableNo + "]";
 	}
 	
 	

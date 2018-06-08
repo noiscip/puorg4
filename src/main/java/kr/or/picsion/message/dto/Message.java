@@ -10,16 +10,19 @@ public class Message {
 	private String msgState;
 	private int sendUserNo;
 	private int receiveUserNo;
-
+	private int tableNo;
+	
 	public Message() {}
 
-	public Message(int msgNo, String msgContent, Date msgReg, String msgState, int sendUserNo, int receiveUserNo) {
+	public Message(int msgNo, String msgContent, Date msgReg, String msgState, int sendUserNo, int receiveUserNo,
+			int tableNo) {
 		this.msgNo = msgNo;
 		this.msgContent = msgContent;
 		this.msgReg = msgReg;
 		this.msgState = msgState;
 		this.sendUserNo = sendUserNo;
 		this.receiveUserNo = receiveUserNo;
+		this.tableNo = tableNo;
 	}
 
 	public int getMsgNo() {
@@ -70,10 +73,21 @@ public class Message {
 		this.receiveUserNo = receiveUserNo;
 	}
 
-	@Override
-	public String toString() {
-		return "Messages [msgNo=" + msgNo + ", msgContent=" + msgContent + ", msgReg=" + msgReg + ", msgState="
-				+ msgState + ", sendUserNo=" + sendUserNo + ", receiveUserNo=" + receiveUserNo + "]";
+	public int getTableNo() {
+		return tableNo;
 	}
 
+	public void setTableNo(int tableNo) {
+		this.tableNo = tableNo;
+	}
+
+	@Override
+	public String toString() {
+		return "Message [msgNo=" + msgNo + ", msgContent=" + msgContent + ", msgReg=" + msgReg + ", msgState="
+				+ msgState + ", sendUserNo=" + sendUserNo + ", receiveUserNo=" + receiveUserNo + ", tableNo=" + tableNo
+				+ "]";
+	}
+
+	
+	
 }

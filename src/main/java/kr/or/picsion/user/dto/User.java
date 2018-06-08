@@ -10,7 +10,7 @@ public class User {
 	private String userName;
 	private int point;
 	private Date userReg;
-	private int blaTypeNo;
+	private int tableNo;
 	private int roleNo;
 	private String accountLinkId;
 	private String prPicture;
@@ -18,7 +18,7 @@ public class User {
 
 	public User() {}
 
-	public User(int userNo, String userId, String pwd, String userName, int point, Date userReg, int blaTypeNo,
+	public User(int userNo, String userId, String pwd, String userName, int point, Date userReg, int tableNo,
 			int roleNo, String accountLinkId, String prPicture, String prContent) {
 		this.userNo = userNo;
 		this.userId = userId;
@@ -26,7 +26,7 @@ public class User {
 		this.userName = userName;
 		this.point = point;
 		this.userReg = userReg;
-		this.blaTypeNo = blaTypeNo;
+		this.tableNo = tableNo;
 		this.roleNo = roleNo;
 		this.accountLinkId = accountLinkId;
 		this.prPicture = prPicture;
@@ -81,12 +81,12 @@ public class User {
 		this.userReg = userReg;
 	}
 
-	public int getBlaTypeNo() {
-		return blaTypeNo;
+	public int getTableNo() {
+		return tableNo;
 	}
 
-	public void setBlaTypeNo(int blaTypeNo) {
-		this.blaTypeNo = blaTypeNo;
+	public void setTableNo(int tableNo) {
+		this.tableNo = tableNo;
 	}
 
 	public int getRoleNo() {
@@ -124,7 +124,7 @@ public class User {
 	@Override
 	public String toString() {
 		return "Users [userNo=" + userNo + ", userId=" + userId + ", pwd=" + pwd + ", userName=" + userName + ", point="
-				+ point + ", userReg=" + userReg + ", blaTypeNo=" + blaTypeNo + ", roleNo=" + roleNo
+				+ point + ", userReg=" + userReg + ", tableNo=" + tableNo + ", roleNo=" + roleNo
 				+ ", accountLinkId=" + accountLinkId + ", prPicture=" + prPicture + ", prContent=" + prContent + "]";
 	}
 
