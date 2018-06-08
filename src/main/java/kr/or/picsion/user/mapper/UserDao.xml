@@ -16,7 +16,10 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		( #{userId}, #{pwd}, #{userName},  1)
 	</insert>
 	
+<<<<<<< HEAD
 	<select id="selectUser" resultType="kr.or.picsion.user.dto.User">
 		SELECT * FROM USERS WHERE userId= #{userId}
 	</select>
+=======
+>>>>>>> 71f7f05132474a30354faac80396201e378e7bcf
 </mapper>
