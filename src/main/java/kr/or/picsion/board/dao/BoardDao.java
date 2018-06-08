@@ -12,4 +12,5 @@ public interface BoardDao {
 	public int updateBoard(Board board);
 	public Board selectBoard(int boardNo);
 	public List<Board> writerBoard(int userNo);
+	public int getBoardCount();
 }

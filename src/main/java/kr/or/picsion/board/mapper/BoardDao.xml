@@ -5,4 +5,18 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 <mapper namespace="kr.or.picsion.board.dao.BoardDao">
 
+ <!-- getBoardList(전체조회) -->
+ <select id="boardList" parameterType="hashmap" 
+                           resultType="kr.or.picsion.board.dto.Board">
+    select * from board order by brdNo desc
+ </select>
+
+<!-- getBoardCount(글 전체 건수) -->
+ <select id="getBoardCount" resultType="Integer">
+  select count(*) from board
+ </select>
+
+
+
+
 </mapper>
