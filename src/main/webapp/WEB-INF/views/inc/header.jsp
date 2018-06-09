@@ -42,25 +42,6 @@
 				</c:choose>
 			</ul>
 		</div>
-<<<<<<< HEAD
-		<ul class="nav navbar-nav">
-		
-				<li><a href="<%=request.getContextPath()%>/user/aa.ps">회원관리</a></li>
-		<c:choose>
-			<c:when test="${sessionScope.user eq null}">
-				<li><a href="<%=request.getContextPath()%>/user/register.ps">회원가입</a></li>
-				<li><a href="<%=request.getContextPath()%>/user/login.ps">로그인</a></li>
-			</c:when>
-			<c:otherwise>
-				<li><a href="#">${sessionScope.user.userName}</a></li>
-				<li><a href="<%=request.getContextPath()%>/user/logout.ps">로그아웃</a></li>
-			</c:otherwise>
-		</c:choose>
-		
-			
-		</ul>
-=======
->>>>>>> e9d267ce23f84f6f50d140b67c361cd247f5017c
 	</div>
 </nav>
 
