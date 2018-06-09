@@ -15,15 +15,16 @@
 	<!-- 공통 DB작업  -->
 	<bean id="driverManagerDataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 	 	<property name="driverClassName" value="com.mysql.jdbc.Driver" />
-	 	<property name="url" value="jdbc:mysql://192.168.0.23:3306/picsion?characterEncoding=utf8" />
-	 	<property name="username" value="Picsion" />
-	 	<property name="password" value="pic1004" />
+	 	<property name="url" value="jdbc:mysql://13.124.171.244:3306/picsion?characterEncoding=utf8" />
+	 	<property name="username" value="root" />
+	 	<property name="password" value="1004" />
 	</bean>
  
- 	<!-- 파일 업로드 지원 LIB -->
-	<!--  <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver" >
-  		<property name="maxUploadSize" value="10485760"/>
-	</bean> -->
+	<!-- File Upload Resolver -->
+	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<!-- maximum file size in bytes 50MB -->
+		<property name="maxUploadSize" value="52428800" />
+	</bean>
 	
 	<bean id="sqlSessionFactoryBean"  class="org.mybatis.spring.SqlSessionFactoryBean">
 	    <property name="dataSource" ref="driverManagerDataSource"></property>

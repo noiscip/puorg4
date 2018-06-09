@@ -11,7 +11,7 @@ public interface UserDao {
 	public int registerUser(User user);
 	public int updateUser(User user);
 	public int deleteUser(int userNo);
-	public User selectUser(int userNo);
+	public User selectUser(String userId);
 	public List<Picture> bookmarkPicList(int userNo);
 	public List<Picture> respectPicList(int userNo);
 	public List<User> followingUserList(int userNo);

@@ -43,8 +43,9 @@ public class HomeController {
 		String formattedDate = dateFormat.format(date);
 		
 		UserDao UserDao = sqlSession.getMapper(UserDao.class);
+		
 		List<User> user = UserDao.getPicsionList();
-		System.out.println("picsion의 리스트를 보여주세요");
+		System.out.println("User 리스트를 보여주세요");
 		for(User u : user) {
 			System.out.println(u);
 		}
@@ -53,11 +54,5 @@ public class HomeController {
 		
 		return "home.home";
 	}
-	
-	@RequestMapping(value="/register.ps")
-    public String register(){
-        
-        return "user.register";
-        
-    }
+
 }
