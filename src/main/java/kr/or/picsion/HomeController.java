@@ -1,6 +1,7 @@
 package kr.or.picsion;
 
 import java.text.DateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Locale;
@@ -13,6 +14,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.View;
 
 import kr.or.picsion.user.dao.UserDao;
 import kr.or.picsion.user.dto.User;
@@ -33,6 +35,27 @@ public class HomeController {
 	/**
 	 * Simply selects the home view to render by returning its name.
 	 */
+	@RequestMapping("/popular.ps")
+	public String getList(Model model) {
+		System.out.println("들어왔");
+		List<String> list = new ArrayList<String>();
+		list.add("images/5.jpg");
+		list.add("images/6.jpg");
+		list.add("images/7.jpg");
+		list.add("images/8.jpg");
+		list.add("images/9.jpg");
+		list.add("images/picsionlogo.png");
+		list.add("images/picsionlogo.png");
+		list.add("images/picsionlogo.png");
+		list.add("images/picsionlogo.png");
+		list.add("images/picsionlogo.png");
+		
+		model.addAttribute("popularlist",list);
+		
+		return "popular.popular";
+	}
+	
+	
 	@RequestMapping(value = "home.ps", method = RequestMethod.GET)
 	public String home(Locale locale, Model model) {
 		logger.info("Welcome home! The client locale is {}.", locale);
@@ -49,6 +72,15 @@ public class HomeController {
 		for(User u : user) {
 			System.out.println(u);
 		}
+		
+		List<String> list = new ArrayList<String>();
+		list.add("images/5.jpg");
+		list.add("images/6.jpg");
+		list.add("images/7.jpg");
+		list.add("images/8.jpg");
+		list.add("images/9.jpg");
+		
+		model.addAttribute("imagelist", list);
 		model.addAttribute("userList", user);
 		model.addAttribute("serverTime", formattedDate );
 		
