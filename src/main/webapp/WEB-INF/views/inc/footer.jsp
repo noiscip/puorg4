@@ -19,7 +19,7 @@
 			  }		  
 		  </style>
 		  <script type="text/javascript">
-		  //top으로
+		  //top으로ws
 		  function topFunction() {
 			    document.body.scrollTop = 0;
 			    document.documentElement.scrollTop = 0;
