@@ -14,6 +14,11 @@
 		</div>
 		<div class="collapse navbar-collapse">
 			<ul class="navbar-nav ml-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="<%=request.getContextPath()%>/user/userlist.ps" onclick="scrollToDownload()"> 
+						<i class="material-icons">cloud_download</i> 회원관리
+					</a>
+				</li>			
 				<c:choose>
 					<c:when test="${sessionScope.user eq null}">
 						<li class="nav-item">
