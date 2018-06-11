@@ -2,10 +2,19 @@
 	<wb-module deploy-name="Picsion">
         <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
 		<wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
-		<wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
-		<wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
+<<<<<<< HEAD
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/test/java"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/test/resources"/>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 0cd8a4f140383c7ee96d49bced8b0471b6ce4065
+>>>>>>> 00fc67ce41a86da51d4d3ffa82f7fda88b7de027
+>>>>>>> 77773061edbd344b26649a3d72bfe356cc4f8e46
 		<property name="java-output-path" value="target/classes"/>
         <property name="context-root" value="picsion"/>
 	</wb-module>
