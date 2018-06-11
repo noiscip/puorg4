@@ -1,5 +1,7 @@
 package kr.or.picsion.user.service;
 
+import java.util.List;
+
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -30,5 +32,12 @@ public class UserService {
 		}
 		
 		return selectUser;
+	}
+	
+	public List<User> userList(){
+		
+		UserDao userDao = sqlSession.getMapper(UserDao.class);
+		List<User> userList = userDao.userList();
+		return userList;
 	}
 }
