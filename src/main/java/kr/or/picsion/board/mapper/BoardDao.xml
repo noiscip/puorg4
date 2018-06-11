@@ -7,9 +7,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
  <!-- getBoardList(전체조회) -->
  <select id="boardList" parameterType="hashmap" 
-                           resultType="kr.or.picsion.board.dto.Board">
-    select * from (select @RNUM := @RNUM + 1 AS ROWNUM, A.*  from (select * from board order by brdNo DESC LIMIT 18446744073709551615 ) A, ( SELECT @RNUM := 0 ) R) RN where RN.ROWNUM >= #{start} and RN.ROWNUM &lt;= #{end};
-   
+                           resultType="kr.or.picsion.board.dto.Board">    
+      select * from (select @RNUM := @RNUM + 1 AS ROWNUM, A.*  from (select * from board order by brdNo DESC LIMIT 18446744073709551615 ) A, ( SELECT @RNUM := 0 ) R) RN where RN.ROWNUM >= #{start} and RN.ROWNUM &lt;= #{end};
  </select>
 
 <!-- getBoardCount(글 전체 건수) -->
