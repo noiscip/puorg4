@@ -1,6 +1,7 @@
 package kr.or.picsion.board.service;
 
 import java.sql.SQLException;
+import java.util.HashMap;
 import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
@@ -17,9 +18,9 @@ public class BoardService {
 	private SqlSession sqlSession;
 	
 	// 글목록보기 서비스
-		public List<Board> notices(String pg, String f, String q) throws ClassNotFoundException, SQLException {
+		public List<Board> boardList(HashMap<String, Integer> map) throws ClassNotFoundException, SQLException {
 
-			int page = 1;
+		/*	int page = 1;
 			String field = "TITLE";
 			String query = "%%";
 
@@ -35,11 +36,19 @@ public class BoardService {
 			if (q != null && !q.equals("")) {
 				query = q;
 			}
-
+*/
 			BoardDao boarddao = sqlSession.getMapper(BoardDao.class);
-			List<Board> list = boarddao.boardList();
+			List<Board> list = boarddao.boardList(map);
 
 			return list;
+		}
+		//게시판 글 수
+		public int getBoardCount() {
+			int total=0;
+
+			BoardDao boarddao = sqlSession.getMapper(BoardDao.class);
+			total=boarddao.getBoardCount();
+			return total;
 		}
 	
 }
