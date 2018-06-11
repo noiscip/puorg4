@@ -1,8 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     
-<div class="page-header header-filter" style="background-image: url('<%=request.getContextPath()%>/assets/img/city.jpg');">
- <div class="section section-signup page-header">
+ <div class="section section-signup page-header" style="background-image: url('<%=request.getContextPath()%>/assets/img/bg3.jpg');">
       <div class="container">
         <div class="row">
           <div class="col-md-4 ml-auto mr-auto">
@@ -27,10 +26,10 @@
                   <span class="bmd-form-group"><div class="input-group">
                     <div class="input-group-prepend">
                       <span class="input-group-text">
-                        <i class="material-icons">email</i>
+                        <i class="material-icons">face</i>
                       </span>
                     </div>
-                    <input type="text" class="form-control" name="userId" placeholder="Id...">
+                    <input type="text" class="form-control" name="userId" placeholder="아이디...">
                   </div></span>
                   <span class="bmd-form-group"><div class="input-group">
                     <div class="input-group-prepend">
@@ -38,22 +37,21 @@
                         <i class="material-icons">lock_outline</i>
                       </span>
                     </div>
-                    <input type="password" class="form-control" name="pwd" placeholder="Password...">
+                    <input type="password" class="form-control" name="pwd" placeholder="비밀번호...">
                   </div></span>
-                  <!-- If you want to add a checkbox to this form, uncomment this code
 
                 <div class="form-check">
                     <label class="form-check-label">
                         <input class="form-check-input" type="checkbox" value="">
-                        Subscribe to newsletter
+                        		아이디 기억하기
                         <span class="form-check-sign">
                             <span class="check"></span>
                         </span>
                     </label>
-                </div> -->
+                </div>
                 </div>
                 <div class="card-footer justify-content-center">
-                  <button type="submit" class="btn btn-link btn-primary btn-lg">Get Started</button>
+                  <button type="submit" class="btn btn-link btn-primary btn-lg">Start</button>
                 </div>
               </form>
             </div>
