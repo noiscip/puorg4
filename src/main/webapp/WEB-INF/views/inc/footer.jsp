@@ -19,6 +19,9 @@
 			  }		  
 		  </style>
 		  <script type="text/javascript">
+<<<<<<< HEAD
+		  //top으로ws
+=======
 		  
 			$(document).ready(function() {
 				$('#sendBtn').click(function() { send(); });
@@ -54,6 +57,7 @@
 		    }
 		  
 		  //top으로
+>>>>>>> cfa056e92f499587c8f1a542f74ec4d4376063ef
 		  function topFunction() {
 			    document.body.scrollTop = 0;
 			    document.documentElement.scrollTop = 0;
