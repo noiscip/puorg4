@@ -20,7 +20,7 @@
     <link href="<%=request.getContextPath()%>/assets/demo/demo.css" rel="stylesheet" />
 	
 	<!-- CSS Files -->
-	<link href="<%=request.getContextPath()%>/assets/css/material-kit.css" rel="stylesheet" />
+	<link href="<%=request.getContextPath()%>/assets/css/material-kit.css?v=2.0.1" rel="stylesheet" />
 	
 	<!-- Js -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -35,7 +35,7 @@
 	<!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
 	<script src="<%=request.getContextPath()%>/assets/js/plugins/nouislider.min.js" type="text/javascript"></script>
 	<!-- Control Center for Now Ui Kit: parallax effects, scripts for the example pages etc -->
-	<script src="<%=request.getContextPath()%>/assets/js/material-kit.js" type="text/javascript"></script>
+	<script src="<%=request.getContextPath()%>/assets/js/material-kit.js?v=2.0.1" type="text/javascript"></script>
 	
 </head>
 
