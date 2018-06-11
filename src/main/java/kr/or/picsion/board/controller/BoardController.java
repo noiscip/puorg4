@@ -28,7 +28,7 @@ public class BoardController {
 	
 	@RequestMapping("board.ps")
 	public String boardList(Model model, String pg) {
-		
+		System.out.println("요청게시판 컨트롤러");
 		List<Board> list=new ArrayList<Board>();
 		int total=0;
 		
