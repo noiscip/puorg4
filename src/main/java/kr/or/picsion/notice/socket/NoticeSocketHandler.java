@@ -17,28 +17,35 @@ public class NoticeSocketHandler extends TextWebSocketHandler {
 	@Autowired
 	private SqlSession sqlSession;
 
-	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 
 	@Override
 	public void afterConnectionClosed(WebSocketSession session, CloseStatus status) throws Exception {
-
+		System.out.println("afterConnectionClosed?????");
 	}
 
 	@Override
 	public void afterConnectionEstablished(WebSocketSession session) throws Exception {
-
+		System.out.println("afterConnectionEstablished!!!!!!!");
 	}
 
 	@Override
 	protected void handleTextMessage(WebSocketSession session, TextMessage message) throws Exception {
 
+		System.out.println("여기는 노티스 소켓 핸들러");
+		System.out.println(message);
+		System.out.println(message.getPayload());
+		System.out.println(session.getId());
 		MessageDao dao = sqlSession.getMapper(MessageDao.class);
-
-		this.logger.info(message.getPayload());
 
 /*		session.sendMessage(new TextMessage(dao.count_receive_note(message.getPayload())));   */
 		// 현재 수신자에게 몇개의 메세지가 와있는지 디비에서 검색함.
 
 	}
+
+	   @Override
+	    public void handleTransportError(
+	            WebSocketSession session, Throwable exception) throws Exception {
+	        System.out.println(session.getId() + " 익셉션 발생: " + exception.getMessage());
+	    }
 
 }
